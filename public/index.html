@@ -3,6 +3,7 @@
   <head>
     <title>Tela de Login</title>
     <link href="./CSS/Login.css" rel="stylesheet">
+    <script src="./LIB/sweetalert2/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <div id="login-box">
@@ -10,14 +11,16 @@
         <img src="./IMG/LOGO.jpeg" height="200px">
       </div>
       <h1>Login</h1>
-      <form action="./indexPage.html">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <input type="submit" value="Entrar">
-      </form>
+      <label for="username">Usuário:</label>
+      <input type="email" id="username" name="username" required>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+      <input type="submit" value="Entrar" onclick="login()">  
       <p>Não tem conta? <a href="./register.html" class="link">Clique aqui<a></p>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="./JS/init.js"></script>
+    <script src="./JS/auth.js"></script>
   </body>
 </html>
