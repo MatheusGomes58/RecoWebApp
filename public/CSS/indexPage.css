@@ -1,0 +1,50 @@
+  body {
+    background-color: #025920;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #historico {
+    display: block;
+    margin: auto;
+    background-color: #01260E;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+  }
+
+  #historico:hover{
+    background-color: #025920;
+  }
+
+  #sacar {
+    display: block;
+    margin: auto;
+    background-color: #01260E;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+  }
+
+  #sacar:hover{
+    background-color: #025920;
+  }
+
+  .img-container{
+    text-align: center;
+    display: block;
+  }
