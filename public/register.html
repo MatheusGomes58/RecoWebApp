@@ -3,6 +3,7 @@
   <head>
     <title>Tela de Cadastro</title>
     <link href="./CSS/Register.css" rel="stylesheet">
+    <script src="./LIB/sweetalert2/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <div id="register-box">
@@ -10,16 +11,20 @@
         <img src="./IMG/LOGO.jpeg" height="200px">
       </div>
       <h1>Cadastro</h1>
-      <form>
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <input type="submit" value="Cadastrar">
-      </form>
+      <label for="namec">Nome:</label>
+      <input type="text" id="namec" name="namec" required>
+      <label for="emailc">E-mail:</label>
+      <input type="email" id="emailc" name="emailc" required>
+      <label for="passwordc">Senha:</label>
+      <input type="password" id="passwordc" name="passwordc" required>
+      <input type="submit" value="Cadastrar" onclick="UserPassword()">
       <p>Já possuo login! <a href="./index.html" class="link">Desejo logar<a></p>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src="./JS/init.js"></script>
+    <script src="./JS/register.js"></script>
   </body>
 </html>
