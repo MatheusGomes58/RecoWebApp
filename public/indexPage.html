@@ -3,11 +3,13 @@
   <head>
     <title>Minha Página Inicial</title>
     <link href="./CSS/indexPage.css" rel="stylesheet">
+    <script src="./LIB/sweetalert2/dist/sweetalert2.all.min.js"></script>
     
   </head>
   <body>
     <img src="./IMG/LOGO.jpeg" height="400px">
     <div>
+        <h1>Olá <a id="useLabel">userDefault</a></h1>
         <form action="./history.html">
             <button class="btn" id="historico">Histórico</button>
         </form>
@@ -15,5 +17,9 @@
             <button class="btn" id="sacar" href="./transfer.html">Sacar</button>
         </form>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="./JS/init.js"></script>
+    <script src="./JS/auth.js"></script>
   </body>
 </html>

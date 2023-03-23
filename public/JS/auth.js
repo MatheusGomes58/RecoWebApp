@@ -1,11 +1,12 @@
 
+let currentUser = {}
 
 function login() {
   if (firebase.auth().currentUser) {
     firebase.auth().signOut()
   }
   
-  const email = document.getElementById("username").value
+  const email = document.getElementById("email").value
   const password = document.getElementById("password").value
 
   firebase
@@ -55,7 +56,7 @@ function login() {
 }
 
 function logando() {
-  const email = document.getElementById("username").value
+  const email = document.getElementById("email").value
   const password = document.getElementById("password").value
   firebase
     .auth()
@@ -105,4 +106,40 @@ function logando() {
 
 function logout() {
   firebase.auth().signOut()
+}
+
+function getUser() {
+  if(document.title !== "Tela de Login"){
+    firebase.auth().onAuthStateChanged((user) => {
+      let userLabel = document.getElementById("useLabel")
+      if (user) {
+        currentUser.uid = user.uid
+        userLabel.innerHTML = user.email
+        if(email != null){email.value = user.email}
+        getUserInfo(user.email)
+      } else {
+        swal
+          .fire({
+            icon: "success",
+            title: "Redirecionando para a tela de autenticação",
+          })
+        .then(() => {
+          setTimeout(() => {
+            window.location.replace("./index.html")
+          }, 1000)
+        })
+      }
+    })
+  }
+}
+
+window.onload = function () {
+  getUser()
+  console.log(document.title)
+  if(typeof titulo != "undefined")
+  {
+    $('#config').hide();
+    valida();
+  }
+  
 }
