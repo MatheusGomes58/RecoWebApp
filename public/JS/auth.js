@@ -138,8 +138,7 @@ window.onload = function () {
   console.log(document.title)
   if(typeof titulo != "undefined")
   {
-    $('#config').hide();
-    valida();
+    db = firebase.firestore()
   }
   
 }
