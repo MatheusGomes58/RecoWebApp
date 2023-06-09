@@ -1,11 +1,15 @@
 var customerName = ""
 var customerEmail = ""
 var CustomerPassword = ""
+var CustomerCode = ""
 
 async function addUser() {
     await db.collection('users').add({
         user: customerEmail,
-        customerName: customerName
+        customerName: customerName,
+        customerCode: CustomerCode,
+        customerValue: 0,
+        type: "user"
     })
     readUsers()
 }
@@ -25,8 +29,8 @@ function UserPassword() {
     customerName = document.getElementById("namec").value
     customerEmail = document.getElementById("emailc").value
     CustomerPassword = document.getElementById("passwordc").value
+    CustomerCode = document.getElementById("codigoc").value
 
-    console.log(customerName +" "+ customerEmail +" "+ CustomerPassword)
     if(customerEmail !== ""){
         firebase.auth().signInWithEmailAndPassword(customerEmail, CustomerPassword).then(() => {
             swal.fire({

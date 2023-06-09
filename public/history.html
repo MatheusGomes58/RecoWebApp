@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Histórioco de Transferencia</title>
+    <title>Histórico de Transferencia</title>
     <link href="./CSS/history.css" rel="stylesheet">
+    <script src="./LIB/sweetalert2/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <div id="history-box">
       <div class="img-container"> 
         <img src="./IMG/LOGO.jpeg" height="200px">
       </div>
-      <h1 id="user">Nome_user</h1>
+      <h1>Olá <a id="useLabel">userDefault</a></h1>
+      <h3>Seu saldo atual é de: <a id="useValue">userValue</a> R$</h3>
+      <h4>E o seu histórico de arrecadação é este.</h4>
+          
       <table>
         <thead>
           <tr>
-            <th>Data</th>
+            <th>DATA</th>
             <th>ITEM</th>
+            <th>QTDE</th>
+            <th>VALOR</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>00/00/0000</td>
-            <td>ITEM</td>
-          </tr>
-          <tr>
-            <td>00/00/0000</td>
-            <td>ITEM</td>
-          </tr>
-          <tr>
-            <td>00/00/0000</td>
-            <td>ITEM</td>
-          </tr>
-          <tr>
-            <td>00/00/0000</td>
-            <td>ITEM</td>
-          </tr>
-          <tr>
-            <td>00/00/0000</td>
-            <td>ITEM</td>
-          </tr>
+        <tbody id="item-table">
         </tbody>
       </table>
+
+      <div class="container">
+        <button class="btn" id="back">Anterior</button>
+      
+        <form action="./indexPage.html">
+          <button class="btn" id="voltar" href="./indexPage.html">Voltar</button>
+        </form>
+      
+        <button class="btn" id="next">Próximo</button>
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+      <script src="./JS/init.js"></script>
+      <script src="./JS/auth.js"></script>
+      <script src="./JS/history.js"></script>
     </div>
   </body>
 </html>
