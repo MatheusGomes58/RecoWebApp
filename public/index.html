@@ -1,26 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Tela de Login</title>
-    <link href="./CSS/Login.css" rel="stylesheet">
-    <script src="./LIB/sweetalert2/dist/sweetalert2.all.min.js"></script>
-  </head>
-  <body>
-    <div id="login-box">
-      <div class="img-container"> 
-        <img src="./IMG/LOGO.jpeg" height="200px">
-      </div>
-      <h1>LOGIN</h1>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password" required>
-      <input type="submit" value="Entrar" onclick="login()">  
-      <p>Não tem conta? <a href="./register.html" class="link">Clique aqui<a></p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/index.css">
+  <title>Home | RECOWEBAPP</title>
+  <link rel="icon" type="image/png" href="./IMG/LOGUINHOAMP.png"/>
+</head>
+<body>
+    <div class="img-container"> 
+        <img src="./IMG/LOGO.jpeg" height="300">
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-    <script src="./JS/init.js"></script>
-    <script src="./JS/auth.js"></script>
-  </body>
+    <section id="quem-somos">
+    <div class="content">
+      <div class="text">
+        <h2>Quem somos?</h2>
+        <p>
+          O site incentiva a reciclagem e recompensa os usuários por descartar corretamente o lixo, 
+          oferecendo um sistema de recompensas em que os pontos podem ser trocados por prêmios ou 
+          descontos. Além disso, o site fornece informações sobre reciclagem e cuidados com o meio ambiente.
+        </p>
+      </div>
+      <div class="image">
+        <img src="./IMG/LOGUINHO.png" alt="Imagem 1">
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que-reciclar">
+    <div class="content">
+      <div class="image">
+        <img src="./IMG/RECICLA.png" alt="Imagem 2">
+      </div>
+      <div class="text">
+        <h2>Por que é importante reciclar?</h2>
+        <p>
+          O site incentiva a reciclagem e recompensa os usuários por descartar corretamente o lixo, 
+          oferecendo um sistema de recompensas em que os pontos podem ser trocados por prêmios ou 
+          descontos. Além disso, o site fornece informações sobre reciclagem e cuidados com o meio ambiente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="onde-descartar">
+    <div class="content">
+      <div class="text">
+        <h2>Onde descartar de forma correta?</h2>
+        <p>
+          O site incentiva a reciclagem e recompensa os usuários por descartar corretamente o lixo, 
+          oferecendo um sistema de recompensas em que os pontos podem ser trocados por prêmios ou 
+          descontos. Além disso, o site fornece informações sobre reciclagem e cuidados com o meio ambiente.
+        </p>
+      </div>
+      <div class="image">
+        <img src="./IMG/LOCATE.png" alt="Imagem 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Restante do código -->
+</body>
 </html>

@@ -1,0 +1,47 @@
+body {
+    background-color: #025920;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .img-container{
+    text-align: center;
+    display: block;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .image {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image img {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #por-que-reciclar .content {
+    flex-direction: row-reverse;
+  }
