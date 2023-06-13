@@ -15,6 +15,10 @@ function showSlide() {
   });
 }
 
+function sair(){
+  window.location.replace("./index.html")
+}
+
 // Função para ir para o próximo slide
 function nextSlide() {
   currentSlide++;
