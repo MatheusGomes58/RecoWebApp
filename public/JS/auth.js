@@ -62,7 +62,7 @@ function logout() {
 }
 
 function getUser() {
-  if(document.title !== "Tela de Login"){
+  if(document.title != "Login | RECOWEBAPP"){
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         currentUser.uid = user.uid
@@ -76,7 +76,7 @@ function getUser() {
           })
         .then(() => {
           setTimeout(() => {
-            window.location.replace("./index.html")
+            window.location.replace("./login.html")
           }, 1000)
         })
       }
@@ -98,7 +98,7 @@ async function getUserInfo() {
     }else if(userData.data().type == "user" && document.title.includes("ADM")){
       window.location.replace("./indexPage.html")
     }
-    if(document.title == "Histórico de Transferencia" || document.title == "Histórico de Transferencia ADM")
+    if(document.title == "Histórico | RECOWEBAPP" || document.title == "Histórico ADM | RECOWEBAPP")
     {
       renderitems(userData.data().type)
     }
