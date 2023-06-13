@@ -1,60 +1,84 @@
 body {
-    color: #D9D9D9;
-    background-color: #025920;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
+  color: #D9D9D9;
+  background-color: #025920;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+  text-align: center;
+}
 
-  .img-container{
-    text-align: center;
-    display: block;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-  }
-  
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  .image {
-    display: flex;
-    align-items: center;
-  }
-  
-  .image img {
-    max-width: 200px;
-    height: auto;
-  }
-  
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
   .content {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .content > * {
+    flex-basis: 45%;
   }
   
   #por-que-reciclar .content {
     flex-direction: row-reverse;
   }
+}
 
+.btn {
+  display: block;
+  margin-top: 20px;
+  background-color: #01260E;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
   .btn {
-    display: block;
-    margin-top: 20px;
-    background-color: #01260E;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 50%;
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
+}
